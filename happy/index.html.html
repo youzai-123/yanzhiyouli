@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #iframepage {
+            width: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="html/login.html" id="iframepage" onload="changeFrameHeight()"></iframe>
+    
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+    function changeFrameHeight() {
+        var iframe = document.getElementById("iframepage");
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+    </script>
+</body>
+</html>
